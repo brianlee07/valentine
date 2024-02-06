@@ -1,0 +1,68 @@
+body {
+    background-image: url(https://www.bobbyrabbit.co.uk/cdn/shop/products/PRETTY-FLOWERS.jpg?v=1633514101);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+}
+
+.image-container img {
+    position: absolute; 
+    bottom: 10%; 
+    right: 5%; 
+}
+
+.image-container2 img {
+    position: absolute; 
+    bottom: 10%; 
+    left: 5%; 
+    transform: scaleX(-1);
+}
+
+.gif-image {
+    width: 300px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#button1 {
+    margin-top: 50px;
+    padding: 10px 20px;
+    background-color: rgba(247, 241, 227, 0.6); 
+    font-size: 16px;
+    color:rgb(63, 40, 12);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#button1:hover {
+    background-color: rgba(247, 241, 227, 1.0); /* Darken the background color on hover */
+}
+
+#restart-button {
+    position: fixed;
+    bottom: 20px;
+    padding: 10px 20px;
+    background-color: rgb(245, 187, 221, 0.9); 
+    font-size: 16px;
+    color:rgb(83, 95, 60);
+    border-radius: 5px;
+    cursor: grab;
+    transition: background-color 1.0s ease;
+}
+
+#restart-button:hover {
+    background-color: rgb(238, 148, 250); /* Darken the background color on hover */
+}
+
+h1 {
+    font-size: 100px;
+    font-family: 'Single Day', cursive;
+    color: rgb(39, 36, 39);
+    background-color: rgba(217, 229, 240, 0.25);
+    padding: 15px 15px;
+    border-radius: 30px;
+}
