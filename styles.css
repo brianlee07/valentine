@@ -33,13 +33,13 @@ body {
 .image-container img {
     position: relative; /* Apply relative positioning to use right and left effectively */
     left: 12%;
-    top: 25%;
+    top: 40%;
 }
 
 .image-container2 img {
     position: relative; /* Apply relative positioning to use right and left effectively */
     right: 12%;
-    top: 25%;
+    top: 40%;
     transform: scaleX(-1); /* Flip the image */
 }
 
