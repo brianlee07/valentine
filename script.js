@@ -3,6 +3,8 @@ const button1 = document.getElementById('button1');
 const h1 = document.querySelector('h1'); // Select the <h1> element
 const restartButton = document.getElementById('restart-button'); // Select the "Restart" button
 const gifImage2 = document.querySelector('.gif-image2'); // For the second gif
+const imageWrapper = document.querySelector('.images-wrapper');
+
 
 // Function to reset the webpage to its pre-transition state
 function resetWebpage() {
@@ -30,9 +32,10 @@ button1.addEventListener('click', () => {
     // Hide the "Transition" button and <h1> element
     button1.style.display = 'none';
     h1.style.display = 'none';
+    imageWrapper.style.display = 'none';
+
     // Hide the "Restart Animation" button initially
     restartButton.style.display = 'none';
-    
     // Set a timeout to show the "Restart Animation" button after 2 seconds
     setTimeout(() => {
         restartButton.style.display = 'block';
@@ -43,3 +46,4 @@ gifImage2.addEventListener('load', () => {
     // Show the "Restart Animation" button after the GIF has loaded (post-transition)
     restartButton.style.display = 'block';
 });
+
