@@ -8,61 +8,92 @@ body {
     flex-direction: column;
 }
 
-.image-container img {
+.images-wrapper {
+    display: flex;
+    justify-content: space-between; 
+    width: 100%; 
     position: absolute; 
     bottom: 10%; 
-    right: 5%; 
+    z-index: 1;
+    flex-direction: row-reverse;
+}
+
+.image-container, .image-container2 {
+    flex: 1; /* Use flex grow to allow containers to expand and use available space */
+    display: flex;
+    justify-content: center; /* Center the image within each container */
+}
+
+.image-container img, .image-container2 img {
+    width: auto; /* Adjust width automatically to maintain aspect ratio */
+    max-width: 100%;
+    height: auto;
+}
+
+.image-container img {
+    position: relative; /* Apply relative positioning to use right and left effectively */
+    left: 12%;
+    top: 25%;
 }
 
 .image-container2 img {
-    position: absolute; 
-    bottom: 10%; 
-    left: 5%; 
-    transform: scaleX(-1);
+    position: relative; /* Apply relative positioning to use right and left effectively */
+    right: 12%;
+    top: 25%;
+    transform: scaleX(-1); /* Flip the image */
 }
 
 .gif-image {
-    width: 300px;
-    text-align: center;
+    max-width: 90%;
+    height: auto;
     margin-top: 20px;
 }
 
-#button1 {
+#button1, #restart-button {
     margin-top: 50px;
     padding: 10px 20px;
     background-color: rgba(247, 241, 227, 0.6); 
-    font-size: 16px;
-    color:rgb(63, 40, 12);
+    font-size: 1em;
+    color: rgb(63, 40, 12);
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    position: relative;
+    z-index: 2;
 }
 
-#button1:hover {
+#button1:hover, #restart-button:hover {
     background-color: rgba(247, 241, 227, 1.0); /* Darken the background color on hover */
 }
 
 #restart-button {
     position: fixed;
     bottom: 20px;
-    padding: 10px 20px;
     background-color: rgb(245, 187, 221, 0.9); 
-    font-size: 16px;
-    color:rgb(83, 95, 60);
+    font-size: 1em;
+    color: rgb(83, 95, 60);
     border-radius: 5px;
     cursor: grab;
     transition: background-color 1.0s ease;
 }
 
-#restart-button:hover {
-    background-color: rgb(238, 148, 250); /* Darken the background color on hover */
-}
-
 h1 {
-    font-size: 100px;
+    font-size: 5vw; /* Responsive font size that adjusts with viewport width */
     font-family: 'Single Day', cursive;
     color: rgb(39, 36, 39);
     background-color: rgba(217, 229, 240, 0.25);
-    padding: 15px 15px;
+    padding: 15px;
     border-radius: 30px;
+}
+
+@media (max-width: 768px) {
+    .image-container img, .image-container2 img {
+        max-width: 70%; /* Adjust for medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .image-container img, .image-container2 img {
+        max-width: 80%; /* Adjust for small screens */
+    }
 }
